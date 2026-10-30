@@ -1,0 +1,86 @@
+import { configureFonts, MD3DarkTheme, MD3LightTheme, type MD3Theme } from 'react-native-paper';
+import { FONT_FAMILY, GOLD } from './fonts';
+
+const fonts = configureFonts({
+  config: {
+    fontFamily: FONT_FAMILY.regular,
+  },
+});
+
+export const lightTheme: MD3Theme = {
+  ...MD3LightTheme,
+  roundness: 8,
+  fonts,
+  colors: {
+    ...MD3LightTheme.colors,
+    primary: '#0A0A0A',
+    onPrimary: '#FFFFFF',
+    primaryContainer: '#F5F5F5',
+    onPrimaryContainer: '#0A0A0A',
+    secondary: GOLD,
+    onSecondary: '#121212',
+    secondaryContainer: '#FDF3E1',
+    onSecondaryContainer: '#6B4A0B',
+    tertiary: GOLD,
+    onTertiary: '#121212',
+    tertiaryContainer: '#FDF3E1',
+    onTertiaryContainer: '#6B4A0B',
+    background: '#FCFCFC',
+    onBackground: '#0A0A0A',
+    surface: '#FFFFFF',
+    onSurface: '#0A0A0A',
+    surfaceVariant: '#F5F5F5',
+    onSurfaceVariant: '#525252',
+    outline: '#E4E4E4',
+    outlineVariant: '#EBEBEB',
+    error: '#E54B4F',
+    onError: '#FFFFFF',
+    errorContainer: '#FEF2F2',
+    onErrorContainer: '#7F1D1D',
+    inverseSurface: '#121212',
+    inverseOnSurface: '#F8F8F8',
+    inversePrimary: GOLD,
+    shadow: '#000000',
+    scrim: '#000000',
+  },
+};
+
+export const darkTheme: MD3Theme = {
+  ...MD3DarkTheme,
+  roundness: 8,
+  fonts,
+  colors: {
+    ...MD3DarkTheme.colors,
+    primary: '#FFFFFF',
+    onPrimary: '#0A0A0A',
+    primaryContainer: '#292929',
+    onPrimaryContainer: '#F8F8F8',
+    secondary: GOLD,
+    onSecondary: '#121212',
+    secondaryContainer: '#3A2A0A',
+    onSecondaryContainer: '#F7D9A0',
+    tertiary: GOLD,
+    onTertiary: '#121212',
+    tertiaryContainer: '#3A2A0A',
+    onTertiaryContainer: '#F7D9A0',
+    background: '#000000',
+    onBackground: '#F8F8F8',
+    surface: '#0E0E0E',
+    onSurface: '#F8F8F8',
+    surfaceVariant: '#1D1D1D',
+    onSurfaceVariant: '#A4A4A4',
+    outline: '#242424',
+    outlineVariant: '#333333',
+    error: '#FF5B5B',
+    onError: '#1A0505',
+    errorContainer: '#3B1212',
+    onErrorContainer: '#FFD4D4',
+    inverseSurface: '#F8F8F8',
+    inverseOnSurface: '#121212',
+    inversePrimary: GOLD,
+    shadow: '#000000',
+    scrim: '#000000',
+  },
+};
+
+export type AppTheme = MD3Theme;
